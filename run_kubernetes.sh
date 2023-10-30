@@ -15,4 +15,4 @@
 kubectl get pods
 # Step 4:
 # Forward the container port to a host
-kubectl port-forward flask-app  8080:8080
+kubectl port-forward flask-app  8080:80
