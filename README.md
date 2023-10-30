@@ -2,20 +2,21 @@
 
 ## Project Overview
 
-In this project, you will apply the skills you have acquired in this course to operationalize a Machine Learning Microservice API. 
+In this project, you will apply the skills you have acquired in this course to operationalize a Machine Learning Microservice API.
 
-You are given a pre-trained, `sklearn` model that has been trained to predict housing prices in Boston according to several features, such as average rooms in a home and data about highway access, teacher-to-pupil ratios, and so on. You can read more about the data, which was initially taken from Kaggle, on [the data source site](https://www.kaggle.com/c/boston-housing). This project tests your ability to operationalize a Python flask app—in a provided file, `app.py`—that serves out predictions (inference) about housing prices through API calls. This project could be extended to any pre-trained machine learning model, such as those for image recognition and data labeling.
+You are given a pre-trained, sklearn model that has been trained to predict housing prices in Boston according to several features, such as average rooms in a home and data about highway access, teacher-to-pupil ratios, and so on. You can read more about the data, which was initially taken from Kaggle, on the data source site. This project tests your ability to operationalize a Python flask app—in a provided file, app.py—that serves out predictions (inference) about housing prices through API calls. This project could be extended to any pre-trained machine learning model, such as those for image recognition and data labeling.
 
 ### Project Tasks
 
-Your project goal is to operationalize this working, machine learning microservice using [kubernetes](https://kubernetes.io/), which is an open-source system for automating the management of containerized applications. In this project you will:
-* Test your project code using linting
-* Complete a Dockerfile to containerize this application
-* Deploy your containerized application using Docker and make a prediction
-* Improve the log statements in the source code for this application
-* Configure Kubernetes and create a Kubernetes cluster
-* Deploy a container using Kubernetes and make a prediction
-* Upload a complete Github repo with CircleCI to indicate that your code has been tested
+The objective of your project is to operationalize a functional machine learning microservice by utilizing Kubernetes, an open-source system designed for automating the management of containerized applications. Throughout this project, you will accomplish the following tasks:
+
+1. Test your project code using linting techniques.
+2. Develop a Dockerfile to containerize the application.
+3. Deploy the containerized application using Docker and perform a prediction.
+4. Enhance the log statements in the application's source code.
+5. Configure Kubernetes and establish a Kubernetes cluster.
+6. Deploy a container using Kubernetes and make a prediction.
+7. Upload a comprehensive Github repository with CircleCI integration to demonstrate that your code has undergone testing.
 
 You can find a detailed [project rubric, here](https://review.udacity.com/#!/rubrics/2576/view).
 
@@ -44,7 +45,20 @@ source .devops/bin/activate
 
 ### Kubernetes Steps
 
-* Setup and Configure Docker locally
-* Setup and Configure Kubernetes locally
-* Create Flask app in Container
-* Run via kubectl
+- You will need to set up and configure Docker on your local machine. This involves installing Docker and ensuring it is properly configured.
+- You will need to set up and configure Kubernetes locally. This entails installing Kubernetes and configuring it to work with your Docker setup.
+- Docker and Kubernetes are set up, you can proceed to create a Flask application within a container. This involves writing the necessary code for your Flask app and creating a Docker image that encapsulates the app.
+- You can run the Flask app via the kubectl command. This will deploy the containerized application onto your Kubernetes cluster, allowing it to be accessed and utilized.
+
+### Code Structure Description
+
+1. .dockerignore: This configuration file specifies the files and directories that should be excluded when building a Docker image.
+2. app.py: This is the main source code file used to run the application.
+3. Dockerfile: This file contains instructions for building the Docker image.
+4. make_prediction.sh: This script is used to call the API.
+5. Makefile: This file provides instructions for setting up the environment, installing dependencies, testing, and linting.
+6. README.md: This file contains instructions and descriptions for the project.
+7. requirements.txt: This file lists the Python dependencies required for installation.
+8. run_docker.sh: This script is used to deploy the application on Docker.
+9. run_kubernetes.sh: This script is used to deploy the application on Kubernetes.
+10. upload_docker.sh: This script is used to upload the Docker image to Docker Hub.
