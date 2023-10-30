@@ -1,1 +1,32 @@
 <paste log output from Kubernetes-mediated prediction, here>
+
+<paste log output from Kubernetes-mediated prediction, here>
+$ ./run_kubernetes.sh
+Error from server (AlreadyExists): pods "flask-app" already exists
+NAME                        READY   STATUS              RESTARTS      AGE
+backend-7cb574479f-lmhpt    1/1     Running             7 (21m ago)   194d
+flask-app                   0/1     ContainerCreating   0             3m39s
+frontend-797ffdd448-m7ngn   1/1     Running             3 (21m ago)   173d
+my-release-postgresql-0     1/1     Running             7 (21m ago)   194d
+error: unable to forward port because pod is not running. Current status=Pending
+
+$ ./run_kubernetes.sh
+Error from server (AlreadyExists): pods "flask-app" already exists
+NAME                        READY   STATUS    RESTARTS      AGE
+backend-7cb574479f-lmhpt    1/1     Running   7 (22m ago)   194d
+flask-app                   1/1     Running   0             4m52s
+frontend-797ffdd448-m7ngn   1/1     Running   3 (22m ago)   173d
+my-release-postgresql-0     1/1     Running   7 (22m ago)   194d
+Forwarding from 127.0.0.1:8080 -> 8080
+Forwarding from [::1]:8080 -> 8080
+
+$ kubectl logs -n default flask-app
+ * Serving Flask app "app" (lazy loading)
+ * Environment: production
+   WARNING: Do not use the development server in a production environment.
+   Use a production WSGI server instead.
+ * Debug mode: on
+ * Running on http://0.0.0.0:80/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 322-281-827
