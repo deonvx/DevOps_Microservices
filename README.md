@@ -45,10 +45,10 @@ source .devops/bin/activate
 
 ### Kubernetes Steps
 
-- You will need to set up and configure Docker on your local machine. This involves installing Docker and ensuring it is properly configured.
-- You will need to set up and configure Kubernetes locally. This entails installing Kubernetes and configuring it to work with your Docker setup.
-- Docker and Kubernetes are set up, you can proceed to create a Flask application within a container. This involves writing the necessary code for your Flask app and creating a Docker image that encapsulates the app.
-- You can run the Flask app via the kubectl command. This will deploy the containerized application onto your Kubernetes cluster, allowing it to be accessed and utilized.
+1. You will need to set up and configure Docker on your local machine. This involves installing Docker and ensuring it is properly configured.
+2. You will need to set up and configure Kubernetes locally. This entails installing Kubernetes and configuring it to work with your Docker setup.
+3. Docker and Kubernetes are set up, you can proceed to create a Flask application within a container. This involves writing the necessary code for your Flask app and creating a Docker image that encapsulates the app.
+4. You can run the Flask app via the kubectl command. This will deploy the containerized application onto your Kubernetes cluster, allowing it to be accessed and utilized.
 
 ### Code Structure Description
 
